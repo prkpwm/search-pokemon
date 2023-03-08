@@ -1,4 +1,4 @@
-"# search-pokemon" 
-install
+"# Step" 
+
 - npm i
 - npm run dev
