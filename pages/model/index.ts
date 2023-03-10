@@ -29,5 +29,5 @@ export interface Pokemon {
   weaknesses: string[];
   fleeRate: number;
   maxCP: number;
-  evolutions: Pokemon;
+  evolutions: Pokemon[];
 }

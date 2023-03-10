@@ -1,33 +1,34 @@
 import { useState } from 'react'
 import React from 'react'
-import { getPokemon } from './services'
+import { getPokemon, responseHandler } from './services'
 import { Pokemon } from './model'
-
 
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
 
     const init = () => {
         const search = document.getElementById('search') as HTMLInputElement
-        if (search) {
-            search.value = 'Pikachu'
-        }
+        if (search) search.value = 'Pikachu'
     }
 
-
-    async function getData() {
+    const getData = async () => {
         const search = document.getElementById('search') as HTMLInputElement
         if (search) {
-            const res = await getPokemon(search.value)
-            setObj(res)
+            const pokemon = getPokemon(search.value)
+            const res = await responseHandler(pokemon)
+            if (res) {
+                setObj(res)
+            }
         }
     }
 
-
-    async function evolutions() {
+    const evolutions = async () => {
         const name = obj?.evolutions?.[0]?.name
-        const res = await getPokemon(name)
-        setObj(res)
+        const pokemon = getPokemon(name)
+        const res = await responseHandler(pokemon)
+        if (res) {
+            setObj(res)
+        }
     }
 
 
@@ -75,164 +76,167 @@ export default function Home() {
         return <div>{arr.join(', ')}</div>
     }
 
+    const block = {
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }
 
-    const style = {
-        table: {
-            border: '1px solid black',
-            width: '100%',
-            textAlign: 'center' as 'center',
-            padding: '10px',
-        },
-        td: {
-            padding: '8px',
-        }
+    const block_center = {
+        display: 'flex',
+        flexDirection: 'row',
+        columnGap: '10px',
+        justifyContent: 'center',
     }
 
     setTimeout(() => {
         init()
-    }, 100)
+    }, 1000)
 
-    return <div className='container'>
-        <h1>Pokemon Search</h1>
-        <input type="text" id='search' />
-        <button onClick={getData}>Search</button>
-        <div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-            }}>
-                <h2 style={{ textAlign: 'center' }}>Result</h2>
-                <div>
-                    <button style={{ backgroundColor: 'green', color: '#fff', fontWeight: 'bold' }} onClick={evolutions} id="search-evolutions">Evolution</button>
+
+    return (
+        <div className='container'>
+            <h1>Pokemon Search</h1>
+            <input type="text" id='search' />
+            <button onClick={getData}>Search </button>
+            <div>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                }}>
+                    <h2 style={{ textAlign: 'center' }}>Result</h2>
+                    <div>
+                        <button style={{ backgroundColor: 'green', color: '#fff', fontWeight: 'bold' }} onClick={evolutions} id="search-evolutions">Evolution</button>
+                    </div>
                 </div>
-            </div>
 
-            <table style={style.table}>
-                <thead>
-                    <th>
-                        Number
-                    </th>
-                    <th>
-                        Name
-                    </th>
-
-                    <th>
-                        Weight
-                    </th>
-                    <th>
-                        Height
-                    </th>
-                </thead>
-                <tbody>
-                </tbody>
-                <td style={style.td}>
-                    {obj?.number}
-                </td>
-                <td style={style.td}>
-                    {obj?.name}
-                </td>
-                <td style={style.td}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}>
-                        <div> Minimum : {obj?.weight?.minimum}</div>
-                        <div> Maximum : {obj?.weight?.maximum}</div>
-
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr 1fr',
+                    gridGap: '10px',
+                    padding: '10px',
+                }}>
+                    <div style={block}>
+                        <h2>Number</h2>
+                        <div>{obj?.number}</div>
                     </div>
-                </td>
-                <td style={style.td}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}>
-                        <div>  Minimum :  {obj?.height?.minimum}</div>
-                        <div>  Maximum : {obj?.height?.maximum}</div>
+                    <div style={block}>
+                        <h2>Name</h2>
+                        <div>{obj?.name}</div>
                     </div>
-                </td>
-            </table>
 
-            <table style={style.table}>
-                <thead>
-                    <th></th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style={style.td}>
-                            <h2>
-                                Attacks
-                            </h2>
-                        </td>
-                        <td style={style.td}>
-                            <div style={{
-                                display: 'flex',
-                                justifyContent: 'space-around',
-                            }}>
-                                <div>
-                                    {fast()}
-                                </div>
-                                <div>
-                                    {special()}
-                                </div>
+                    <div style={block}>
+                        <h2>Weight</h2>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                        }}>
+                            <div> Minimum : {obj?.weight?.minimum}</div>
+                            <div> Maximum : {obj?.weight?.maximum}</div>
+
+                        </div>
+                    </div>
+                    <div style={block}>
+                        <h2>Height</h2>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                        }}>
+                            <div>  Minimum :  {obj?.height?.minimum}</div>
+                            <div>  Maximum : {obj?.height?.maximum}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '4fr 1fr',
+                    gridGap: '10px',
+                    padding: '10px',
+                }}>
+                    <div style={block}>
+                        <h2>Attacks</h2>
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-around',
+                        }}>
+                            <div>
+                                {fast()}
                             </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                            <div>
+                                {special()}
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        rowGap: '10px',
+                        height: '100%',
+                    }}>
 
-            <table style={style.table}>
-                <thead>
-                    <th></th>
-                    <th></th>
-                </thead>
-                <tbody>
+                        <div style={{
+                            border: '1px solid black',
+                            padding: '10px',
+                            textAlign: 'center',
 
-                    <tr>
-                        <td >Classification</td>
-                        <td style={style.td}>{obj.classification}</td>
-                    </tr>
-                    <tr>
-                        <td >Types</td>
-                        <td style={style.td}>{obj.types}</td>
-                    </tr>
-                    <tr>
-                        <td >Resistant</td>
-                        <td style={style.td}>
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                columnGap: '10px',
-                                justifyContent: 'center',
-                            }}>
+                        }}>
+                            <h2>Resistant</h2>
+                            <div style={block_center}>
                                 {resistant()}
                             </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td >Weaknesses</td>
-                        <td style={style.td}>
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                            }}>
+                        </div>
+                        <div style={{
+                            border: '1px solid black',
+                            padding: '10px',
+                            textAlign: 'center',
+                        }}>
+                            <h2>weaknesses</h2>
+                            <div style={block_center}>
                                 {weaknesses()}
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >Flee Rate</td>
-                        <td style={style.td}>{obj.fleeRate}</td>
-                    </tr>
-                    <tr>
-                        <td >Max CP</td>
-                        <td style={style.td}>{obj.maxCP}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div >
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gridGap: '10px',
+                    padding: '10px',
+                }}>
+                    <div style={block}>
+                        <h2>Classification</h2>
+                        <div>{obj.classification}</div>
+                    </div>
+
+                    <div style={block}>
+                        <h2>Types</h2>
+                        <div>{obj.types}</div>
+                    </div>
+                </div>
+
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    gridGap: '10px',
+                    padding: '10px',
+                }}>
+                    {/* maxCP,fleeRate,evolution */}
+                    <div style={block}>
+                        <h2>Max CP</h2>
+                        <div>{obj.maxCP}</div>
+                    </div>
+                    <div style={block}>
+                        <h2>Flee Rate</h2>
+                        <div>{obj.fleeRate}</div>
+                    </div>
+                    <div style={block}>
+                        <h2>Evolution</h2>
+                        <div>{obj.evolutions?.[0]?.name ?? 'Can\'t Evolution'}</div>
+                    </div>
+                </div>
+            </div >
+        </div >)
 
 }
