@@ -1,5 +1,5 @@
 <h1>
-Step
+Run
 </h1>
 
 - npm i
