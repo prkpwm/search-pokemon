@@ -1,6 +1,7 @@
 import axios from "axios";
+import { Pokemon } from "../../model";
 
-export const getPokemon = async (name: string) => {
+export const getPokemon = async (name: string): Promise<Pokemon> => {
   return new Promise((resolve, reject) => {
     axios({
       method: "POST",

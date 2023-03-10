@@ -91,7 +91,7 @@ export default function Home() {
 
     setTimeout(() => {
         init()
-    }, 1000)
+    }, 100)
 
 
     return (
