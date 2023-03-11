@@ -30,4 +30,37 @@ describe("getPokemon", () => {
     expect(data.getPokemon).toBeCalled();
     expect(pokemon).toEqual(null);
   });
+
+  it("should be type grass", async () => {
+    const mock1 = {
+      name: "bulbasaur",
+      types: ["grass", "poison"],
+    };
+    mock(data, "getPokemon", jest.fn().mockReturnValue(mock1));
+    const pokemon = await getPokemon("bulbasaur");
+    expect(data.getPokemon).toBeCalled();
+    expect(pokemon.types).toContain("grass");
+  });
+
+  it("should be type fire", async () => {
+    const mock1 = {
+      name: "charmander",
+      types: ["fire"],
+    };
+    mock(data, "getPokemon", jest.fn().mockReturnValue(mock1));
+    const pokemon = await getPokemon("charmander");
+    expect(data.getPokemon).toBeCalled();
+    expect(pokemon.types).toContain("fire");
+  });
+
+  it("should be type water", async () => {
+    const mock1 = {
+      name: "squirtle",
+      types: ["water"],
+    };
+    mock(data, "getPokemon", jest.fn().mockReturnValue(mock1));
+    const pokemon = await getPokemon("squirtle");
+    expect(data.getPokemon).toBeCalled();
+    expect(pokemon.types).toContain("water");
+  });
 });

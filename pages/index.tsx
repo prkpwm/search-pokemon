@@ -5,32 +5,28 @@ import { Pokemon } from './model'
 
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
-
-    const init = () => {
-        const search = document.getElementById('search') as HTMLInputElement
-        if (search) search.value = 'Pikachu'
+    let searchValue = 'Pikachu'
+    const block = {
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
     }
+
+    const block_center = {
+        display: 'flex',
+        flexDirection: 'row',
+        columnGap: '10px',
+        justifyContent: 'center',
+    }
+
 
     const getData = async () => {
-        const search = document.getElementById('search') as HTMLInputElement
-        if (search) {
-            const pokemon = getPokemon(search.value)
-            const res = await responseHandler(pokemon)
-            if (res) {
-                setObj(res)
-            }
-        }
-    }
-
-    const evolutions = async () => {
-        const name = obj?.evolutions?.[0]?.name
-        const pokemon = getPokemon(name)
-        const res = await responseHandler(pokemon)
+        const pokemon = getPokemon(searchValue)
+        const res = await responseHandler(pokemon) as Pokemon
         if (res) {
             setObj(res)
         }
     }
-
 
     const fast = () => {
         const arr = []
@@ -76,28 +72,36 @@ export default function Home() {
         return <div>{arr.join(', ')}</div>
     }
 
-    const block = {
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
+    const evolutionsList = () => {
+        const arr = []
+        if (obj?.evolutions?.length === 0) return (<div> Can\'t Evolution</div>)
+        for (let i = 0; i < obj?.evolutions?.length; i++) {
+            arr.push(<a style={{
+                fontWeight: 'bold',
+                textDecoration: 'underline',
+                cursor: 'pointer',
+                color: 'blue',
+                margin: '0 10px',
+            }} onClick={() => {
+                searchValue = obj?.evolutions?.[i]?.name
+                setTimeout(() => {
+                    getData()
+                }, 100)
+            }}>{obj?.evolutions?.[i]?.name}</a>)
+        }
+        return <div>{arr}</div>
     }
 
-    const block_center = {
-        display: 'flex',
-        flexDirection: 'row',
-        columnGap: '10px',
-        justifyContent: 'center',
+
+
+    const handleChange = (event) => {
+        searchValue = event.target.value
     }
-
-    setTimeout(() => {
-        init()
-    }, 100)
-
 
     return (
         <div className='container'>
             <h1>Pokemon Search</h1>
-            <input type="text" id='search' />
+            <input type="text" id='search' value={searchValue} onChange={handleChange} />
             <button onClick={getData}>Search </button>
             <div>
                 <div style={{
@@ -105,9 +109,6 @@ export default function Home() {
                     justifyContent: 'space-between',
                 }}>
                     <h2 style={{ textAlign: 'center' }}>Result</h2>
-                    <div>
-                        <button style={{ backgroundColor: 'green', color: '#fff', fontWeight: 'bold' }} onClick={evolutions} id="search-evolutions">Evolution</button>
-                    </div>
                 </div>
 
                 <div style={{
@@ -222,7 +223,6 @@ export default function Home() {
                     gridGap: '10px',
                     padding: '10px',
                 }}>
-                    {/* maxCP,fleeRate,evolution */}
                     <div style={block}>
                         <h2>Max CP</h2>
                         <div>{obj.maxCP}</div>
@@ -233,7 +233,7 @@ export default function Home() {
                     </div>
                     <div style={block}>
                         <h2>Evolution</h2>
-                        <div>{obj.evolutions?.[0]?.name ?? 'Can\'t Evolution'}</div>
+                        <div>{evolutionsList()}</div>
                     </div>
                 </div>
             </div >
