@@ -6,7 +6,7 @@ import { Pokemon } from '../model'
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
     const [searchValue, setSearchValue] = useState('Bulbasaur')
-    
+
 
     const getData = async () => {
         const pokemon = getPokemon(searchValue)
@@ -60,6 +60,14 @@ export default function Home() {
         return <div>{arr.join(', ')}</div>
     }
 
+    const types = () => {
+        const arr = []
+        for (let i = 0; i < obj?.types?.length; i++) {
+            arr.push(obj?.types?.[i])
+        }
+        return <div>{arr.join(', ')}</div>
+    }
+
     const evolutionsList = () => {
         const arr = []
         if (obj?.evolutions?.length === 0) return (<div> Can\'t Evolution</div>)
@@ -77,7 +85,7 @@ export default function Home() {
                 if (res) {
                     setObj(res)
                 }
-       
+
             }}>{obj?.evolutions?.[i]?.name}</a>)
         }
         return <div>{arr}</div>
@@ -110,27 +118,27 @@ export default function Home() {
                     padding: '10px',
                 }}>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Number</h2>
                         <div>{obj?.number}</div>
                     </div>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Name</h2>
                         <div>{obj?.name}</div>
                     </div>
 
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Weight</h2>
                         <div style={{
                             display: 'flex',
@@ -142,10 +150,10 @@ export default function Home() {
                         </div>
                     </div>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Height</h2>
                         <div style={{
                             display: 'flex',
@@ -164,10 +172,10 @@ export default function Home() {
                     padding: '10px',
                 }}>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Attacks</h2>
                         <div style={{
                             display: 'flex',
@@ -196,11 +204,11 @@ export default function Home() {
                         }}>
                             <h2>Resistant</h2>
                             <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        columnGap: '10px',
-        justifyContent: 'center',
-    }}>
+                                display: 'flex',
+                                flexDirection: 'row',
+                                columnGap: '10px',
+                                justifyContent: 'center',
+                            }}>
                                 {resistant()}
                             </div>
                         </div>
@@ -211,11 +219,11 @@ export default function Home() {
                         }}>
                             <h2>weaknesses</h2>
                             <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        columnGap: '10px',
-        justifyContent: 'center',
-    }}>
+                                display: 'flex',
+                                flexDirection: 'row',
+                                columnGap: '10px',
+                                justifyContent: 'center',
+                            }}>
                                 {weaknesses()}
                             </div>
                         </div>
@@ -229,21 +237,21 @@ export default function Home() {
                     padding: '10px',
                 }}>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Classification</h2>
                         <div>{obj.classification}</div>
                     </div>
 
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Types</h2>
-                        <div>{obj.types}</div>
+                        <div>{types()}</div>
                     </div>
                 </div>
 
@@ -254,26 +262,26 @@ export default function Home() {
                     padding: '10px',
                 }}>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Max CP</h2>
                         <div>{obj.maxCP}</div>
                     </div>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Flee Rate</h2>
                         <div>{obj.fleeRate}</div>
                     </div>
                     <div style={{
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }}>
+                        border: '1px solid black',
+                        padding: '10px',
+                        textAlign: 'center',
+                    }}>
                         <h2>Evolution</h2>
                         <div>{evolutionsList()}</div>
                     </div>
