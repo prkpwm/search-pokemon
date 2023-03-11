@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Pokemon } from "../../model";
+import { Pokemon } from "../../../model";
 
 export const getPokemon = async (name: string): Promise<Pokemon> => {
   return new Promise((resolve, reject) => {

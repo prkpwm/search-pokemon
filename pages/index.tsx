@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
-import { getPokemon, responseHandler } from './services'
-import { Pokemon } from './model'
+import { getPokemon, responseHandler } from '../service'
+import { Pokemon } from '../model'
 
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
