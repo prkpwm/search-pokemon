@@ -6,19 +6,6 @@ import { Pokemon } from './model'
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
     let searchValue = 'Pikachu'
-    const block = {
-        border: '1px solid black',
-        padding: '10px',
-        textAlign: 'center',
-    }
-
-    const block_center = {
-        display: 'flex',
-        flexDirection: 'row',
-        columnGap: '10px',
-        justifyContent: 'center',
-    }
-
 
     const getData = async () => {
         const pokemon = getPokemon(searchValue)
@@ -117,16 +104,28 @@ export default function Home() {
                     gridGap: '10px',
                     padding: '10px',
                 }}>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Number</h2>
                         <div>{obj?.number}</div>
                     </div>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Name</h2>
                         <div>{obj?.name}</div>
                     </div>
 
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Weight</h2>
                         <div style={{
                             display: 'flex',
@@ -137,7 +136,11 @@ export default function Home() {
 
                         </div>
                     </div>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Height</h2>
                         <div style={{
                             display: 'flex',
@@ -155,7 +158,11 @@ export default function Home() {
                     gridGap: '10px',
                     padding: '10px',
                 }}>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Attacks</h2>
                         <div style={{
                             display: 'flex',
@@ -183,7 +190,12 @@ export default function Home() {
 
                         }}>
                             <h2>Resistant</h2>
-                            <div style={block_center}>
+                            <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        columnGap: '10px',
+        justifyContent: 'center',
+    }}>
                                 {resistant()}
                             </div>
                         </div>
@@ -193,7 +205,12 @@ export default function Home() {
                             textAlign: 'center',
                         }}>
                             <h2>weaknesses</h2>
-                            <div style={block_center}>
+                            <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        columnGap: '10px',
+        justifyContent: 'center',
+    }}>
                                 {weaknesses()}
                             </div>
                         </div>
@@ -206,12 +223,20 @@ export default function Home() {
                     gridGap: '10px',
                     padding: '10px',
                 }}>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Classification</h2>
                         <div>{obj.classification}</div>
                     </div>
 
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Types</h2>
                         <div>{obj.types}</div>
                     </div>
@@ -223,15 +248,27 @@ export default function Home() {
                     gridGap: '10px',
                     padding: '10px',
                 }}>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Max CP</h2>
                         <div>{obj.maxCP}</div>
                     </div>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Flee Rate</h2>
                         <div>{obj.fleeRate}</div>
                     </div>
-                    <div style={block}>
+                    <div style={{
+        border: '1px solid black',
+        padding: '10px',
+        textAlign: 'center',
+    }}>
                         <h2>Evolution</h2>
                         <div>{evolutionsList()}</div>
                     </div>

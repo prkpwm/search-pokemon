@@ -1,62 +1,416 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/index";
-exports.ids = ["pages/index"];
+exports.id = 405;
+exports.ids = [405,432,665,54];
 exports.modules = {
 
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
+/***/ 119:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services */ \"./pages/services.ts\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_services__WEBPACK_IMPORTED_MODULE_1__]);\n_services__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\nvar _jsxFileName = \"D:\\\\search-pokemon\\\\pages\\\\index.tsx\";\n\n\n\n\nfunction Home() {\n  const {\n    0: obj,\n    1: setObj\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});\n  let searchValue = 'Pikachu';\n  const block = {\n    border: '1px solid black',\n    padding: '10px',\n    textAlign: 'center'\n  };\n  const block_center = {\n    display: 'flex',\n    flexDirection: 'row',\n    columnGap: '10px',\n    justifyContent: 'center'\n  };\n\n  const getData = async () => {\n    const pokemon = (0,_services__WEBPACK_IMPORTED_MODULE_1__.getPokemon)(searchValue);\n    const res = await (0,_services__WEBPACK_IMPORTED_MODULE_1__.responseHandler)(pokemon);\n\n    if (res) {\n      setObj(res);\n    }\n  };\n\n  const fast = () => {\n    const arr = [];\n\n    for (let i = 0; i < obj?.attacks?.fast?.length; i++) {\n      arr.push( /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Name: \", obj?.attacks?.fast?.[i]?.name]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 35,\n          columnNumber: 17\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Type: \", obj?.attacks?.fast?.[i]?.type]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 36,\n          columnNumber: 17\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Damage: \", obj?.attacks?.fast?.[i]?.damage]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 37,\n          columnNumber: 17\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 34,\n        columnNumber: 22\n      }, this));\n    }\n\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: [\" \", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n        children: \"Fast\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 40,\n        columnNumber: 22\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'flex',\n          columnGap: '20px'\n        },\n        children: [\" \", arr, \" \"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 41,\n        columnNumber: 13\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 40,\n      columnNumber: 16\n    }, this);\n  };\n\n  const special = () => {\n    const arr = [];\n\n    for (let i = 0; i < obj?.attacks?.special?.length; i++) {\n      arr.push( /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Name: \", obj?.attacks?.special?.[i]?.name]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 49,\n          columnNumber: 17\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Type: \", obj?.attacks?.special?.[i]?.type]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 50,\n          columnNumber: 17\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"p\", {\n          children: [\"Damage: \", obj?.attacks?.special?.[i]?.damage]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 51,\n          columnNumber: 17\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 48,\n        columnNumber: 22\n      }, this));\n    }\n\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: [\" \", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n        children: \"Special\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 54,\n        columnNumber: 22\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'flex',\n          columnGap: '20px'\n        },\n        children: [\" \", arr, \" \"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 55,\n        columnNumber: 13\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 54,\n      columnNumber: 16\n    }, this);\n  };\n\n  const weaknesses = () => {\n    const arr = [];\n\n    for (let i = 0; i < obj?.weaknesses?.length; i++) {\n      arr.push(obj?.weaknesses?.[i]);\n    }\n\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: arr.join(', ')\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 64,\n      columnNumber: 16\n    }, this);\n  };\n\n  const resistant = () => {\n    const arr = [];\n\n    for (let i = 0; i < obj?.resistant?.length; i++) {\n      arr.push(obj?.resistant?.[i]);\n    }\n\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: arr.join(', ')\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 72,\n      columnNumber: 16\n    }, this);\n  };\n\n  const evolutionsList = () => {\n    const arr = [];\n    if (obj?.evolutions?.length === 0) return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: \" Can\\\\'t Evolution\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 77,\n      columnNumber: 52\n    }, this);\n\n    for (let i = 0; i < obj?.evolutions?.length; i++) {\n      arr.push( /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"a\", {\n        style: {\n          fontWeight: 'bold',\n          textDecoration: 'underline',\n          cursor: 'pointer',\n          color: 'blue',\n          margin: '0 10px'\n        },\n        onClick: () => {\n          searchValue = obj?.evolutions?.[i]?.name;\n          setTimeout(() => {\n            getData();\n          }, 100);\n        },\n        children: obj?.evolutions?.[i]?.name\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 79,\n        columnNumber: 22\n      }, this));\n    }\n\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: arr\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 92,\n      columnNumber: 16\n    }, this);\n  };\n\n  const handleChange = event => {\n    searchValue = event.target.value;\n  };\n\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n    className: \"container\",\n    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h1\", {\n      children: \"Pokemon Search\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 103,\n      columnNumber: 13\n    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"input\", {\n      type: \"text\",\n      id: \"search\",\n      value: searchValue,\n      onChange: handleChange\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 104,\n      columnNumber: 13\n    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"button\", {\n      onClick: getData,\n      children: \"Search \"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 105,\n      columnNumber: 13\n    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'flex',\n          justifyContent: 'space-between'\n        },\n        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n          style: {\n            textAlign: 'center'\n          },\n          children: \"Result\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 111,\n          columnNumber: 21\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 107,\n        columnNumber: 17\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'grid',\n          gridTemplateColumns: '1fr 1fr 1fr 1fr',\n          gridGap: '10px',\n          padding: '10px'\n        },\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Number\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 121,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj?.number\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 122,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 120,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Name\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 125,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj?.name\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 126,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 124,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Weight\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 130,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            style: {\n              display: 'flex',\n              flexDirection: 'column'\n            },\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: [\" Minimum : \", obj?.weight?.minimum]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 135,\n              columnNumber: 29\n            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: [\" Maximum : \", obj?.weight?.maximum]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 136,\n              columnNumber: 29\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 131,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 129,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Height\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 141,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            style: {\n              display: 'flex',\n              flexDirection: 'column'\n            },\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: [\"  Minimum :  \", obj?.height?.minimum]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 146,\n              columnNumber: 29\n            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: [\"  Maximum : \", obj?.height?.maximum]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 147,\n              columnNumber: 29\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 142,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 140,\n          columnNumber: 21\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 114,\n        columnNumber: 17\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'grid',\n          gridTemplateColumns: '4fr 1fr',\n          gridGap: '10px',\n          padding: '10px'\n        },\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Attacks\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 159,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            style: {\n              display: 'flex',\n              justifyContent: 'space-around'\n            },\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: fast()\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 164,\n              columnNumber: 29\n            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              children: special()\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 167,\n              columnNumber: 29\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 160,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 158,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: {\n            display: 'flex',\n            flexDirection: 'column',\n            rowGap: '10px',\n            height: '100%'\n          },\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            style: {\n              border: '1px solid black',\n              padding: '10px',\n              textAlign: 'center'\n            },\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n              children: \"Resistant\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 185,\n              columnNumber: 29\n            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              style: block_center,\n              children: resistant()\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 186,\n              columnNumber: 29\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 179,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            style: {\n              border: '1px solid black',\n              padding: '10px',\n              textAlign: 'center'\n            },\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n              children: \"weaknesses\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 195,\n              columnNumber: 29\n            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n              style: block_center,\n              children: weaknesses()\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 196,\n              columnNumber: 29\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 190,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 172,\n          columnNumber: 21\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 152,\n        columnNumber: 17\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'grid',\n          gridTemplateColumns: '1fr 1fr',\n          gridGap: '10px',\n          padding: '10px'\n        },\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Classification\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 210,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj.classification\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 211,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 209,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Types\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 215,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj.types\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 216,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 214,\n          columnNumber: 21\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 203,\n        columnNumber: 17\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n        style: {\n          display: 'grid',\n          gridTemplateColumns: '1fr 1fr 1fr',\n          gridGap: '10px',\n          padding: '10px'\n        },\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Max CP\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 227,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj.maxCP\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 228,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 226,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Flee Rate\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 231,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: obj.fleeRate\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 232,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 230,\n          columnNumber: 21\n        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n          style: block,\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"h2\", {\n            children: \"Evolution\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 235,\n            columnNumber: 25\n          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(\"div\", {\n            children: evolutionsList()\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 236,\n            columnNumber: 25\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 234,\n          columnNumber: 21\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 220,\n        columnNumber: 17\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 106,\n      columnNumber: 13\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 102,\n    columnNumber: 9\n  }, this);\n}\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFBLFFBVkosZUFjSTtVQUFLLEtBQUssRUFBRWhELEtBQVo7VUFBQSx3QkFDSTtZQUFBO1VBQUE7WUFBQTtZQUFBO1lBQUE7VUFBQSxRQURKLGVBRUk7WUFBQSxVQUFNeUIsY0FBYztVQUFwQjtZQUFBO1lBQUE7WUFBQTtVQUFBLFFBRko7UUFBQTtVQUFBO1VBQUE7VUFBQTtRQUFBLFFBZEo7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBLFFBbEhKO0lBQUE7TUFBQTtNQUFBO01BQUE7SUFBQSxRQUpKO0VBQUE7SUFBQTtJQUFBO0lBQUE7RUFBQSxRQURKO0FBNklILEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9pbmRleC50c3g/MDdmZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0J1xyXG5pbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXHJcbmltcG9ydCB7IGdldFBva2Vtb24sIHJlc3BvbnNlSGFuZGxlciB9IGZyb20gJy4vc2VydmljZXMnXHJcbmltcG9ydCB7IFBva2Vtb24gfSBmcm9tICcuL21vZGVsJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHtcclxuICAgIGNvbnN0IFtvYmosIHNldE9ial0gPSB1c2VTdGF0ZSh7fSBhcyBQb2tlbW9uKVxyXG4gICAgbGV0IHNlYXJjaFZhbHVlID0gJ1Bpa2FjaHUnXHJcbiAgICBjb25zdCBibG9jayA9IHtcclxuICAgICAgICBib3JkZXI6ICcxcHggc29saWQgYmxhY2snLFxyXG4gICAgICAgIHBhZGRpbmc6ICcxMHB4JyxcclxuICAgICAgICB0ZXh0QWxpZ246ICdjZW50ZXInLFxyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IGJsb2NrX2NlbnRlciA9IHtcclxuICAgICAgICBkaXNwbGF5OiAnZmxleCcsXHJcbiAgICAgICAgZmxleERpcmVjdGlvbjogJ3JvdycsXHJcbiAgICAgICAgY29sdW1uR2FwOiAnMTBweCcsXHJcbiAgICAgICAganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInLFxyXG4gICAgfVxyXG5cclxuXHJcbiAgICBjb25zdCBnZXREYXRhID0gYXN5bmMgKCkgPT4ge1xyXG4gICAgICAgIGNvbnN0IHBva2Vtb24gPSBnZXRQb2tlbW9uKHNlYXJjaFZhbHVlKVxyXG4gICAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IHJlc3BvbnNlSGFuZGxlcihwb2tlbW9uKSBhcyBQb2tlbW9uXHJcbiAgICAgICAgaWYgKHJlcykge1xyXG4gICAgICAgICAgICBzZXRPYmoocmVzKVxyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICBjb25zdCBmYXN0ID0gKCkgPT4ge1xyXG4gICAgICAgIGNvbnN0IGFyciA9IFtdXHJcbiAgICAgICAgZm9yIChsZXQgaSA9IDA7IGkgPCBvYmo/LmF0dGFja3M/LmZhc3Q/Lmxlbmd0aDsgaSsrKSB7XHJcbiAgICAgICAgICAgIGFyci5wdXNoKDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8cD5OYW1lOiB7b2JqPy5hdHRhY2tzPy5mYXN0Py5baV0/Lm5hbWV9PC9wPlxyXG4gICAgICAgICAgICAgICAgPHA+VHlwZToge29iaj8uYXR0YWNrcz8uZmFzdD8uW2ldPy50eXBlfTwvcD5cclxuICAgICAgICAgICAgICAgIDxwPkRhbWFnZToge29iaj8uYXR0YWNrcz8uZmFzdD8uW2ldPy5kYW1hZ2V9PC9wPlxyXG4gICAgICAgICAgICA8L2Rpdj4pXHJcbiAgICAgICAgfVxyXG4gICAgICAgIHJldHVybiA8ZGl2PiA8aDI+RmFzdDwvaDI+XHJcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3sgZGlzcGxheTogJ2ZsZXgnLCBjb2x1bW5HYXA6ICcyMHB4JywgfX0+IHthcnJ9IDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IHNwZWNpYWwgPSAoKSA9PiB7XHJcbiAgICAgICAgY29uc3QgYXJyID0gW11cclxuICAgICAgICBmb3IgKGxldCBpID0gMDsgaSA8IG9iaj8uYXR0YWNrcz8uc3BlY2lhbD8ubGVuZ3RoOyBpKyspIHtcclxuICAgICAgICAgICAgYXJyLnB1c2goPGRpdj5cclxuICAgICAgICAgICAgICAgIDxwPk5hbWU6IHtvYmo/LmF0dGFja3M/LnNwZWNpYWw/LltpXT8ubmFtZX08L3A+XHJcbiAgICAgICAgICAgICAgICA8cD5UeXBlOiB7b2JqPy5hdHRhY2tzPy5zcGVjaWFsPy5baV0/LnR5cGV9PC9wPlxyXG4gICAgICAgICAgICAgICAgPHA+RGFtYWdlOiB7b2JqPy5hdHRhY2tzPy5zcGVjaWFsPy5baV0/LmRhbWFnZX08L3A+XHJcbiAgICAgICAgICAgIDwvZGl2PilcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIDxkaXY+IDxoMj5TcGVjaWFsPC9oMj5cclxuICAgICAgICAgICAgPGRpdiBzdHlsZT17eyBkaXNwbGF5OiAnZmxleCcsIGNvbHVtbkdhcDogJzIwcHgnLCB9fT4ge2Fycn0gPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICB9XHJcblxyXG4gICAgY29uc3Qgd2Vha25lc3NlcyA9ICgpID0+IHtcclxuICAgICAgICBjb25zdCBhcnIgPSBbXVxyXG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgb2JqPy53ZWFrbmVzc2VzPy5sZW5ndGg7IGkrKykge1xyXG4gICAgICAgICAgICBhcnIucHVzaChvYmo/LndlYWtuZXNzZXM/LltpXSlcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIDxkaXY+e2Fyci5qb2luKCcsICcpfTwvZGl2PlxyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IHJlc2lzdGFudCA9ICgpID0+IHtcclxuICAgICAgICBjb25zdCBhcnIgPSBbXVxyXG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgb2JqPy5yZXNpc3RhbnQ/Lmxlbmd0aDsgaSsrKSB7XHJcbiAgICAgICAgICAgIGFyci5wdXNoKG9iaj8ucmVzaXN0YW50Py5baV0pXHJcbiAgICAgICAgfVxyXG4gICAgICAgIHJldHVybiA8ZGl2PnthcnIuam9pbignLCAnKX08L2Rpdj5cclxuICAgIH1cclxuXHJcbiAgICBjb25zdCBldm9sdXRpb25zTGlzdCA9ICgpID0+IHtcclxuICAgICAgICBjb25zdCBhcnIgPSBbXVxyXG4gICAgICAgIGlmIChvYmo/LmV2b2x1dGlvbnM/Lmxlbmd0aCA9PT0gMCkgcmV0dXJuICg8ZGl2PiBDYW5cXCd0IEV2b2x1dGlvbjwvZGl2PilcclxuICAgICAgICBmb3IgKGxldCBpID0gMDsgaSA8IG9iaj8uZXZvbHV0aW9ucz8ubGVuZ3RoOyBpKyspIHtcclxuICAgICAgICAgICAgYXJyLnB1c2goPGEgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgIGZvbnRXZWlnaHQ6ICdib2xkJyxcclxuICAgICAgICAgICAgICAgIHRleHREZWNvcmF0aW9uOiAndW5kZXJsaW5lJyxcclxuICAgICAgICAgICAgICAgIGN1cnNvcjogJ3BvaW50ZXInLFxyXG4gICAgICAgICAgICAgICAgY29sb3I6ICdibHVlJyxcclxuICAgICAgICAgICAgICAgIG1hcmdpbjogJzAgMTBweCcsXHJcbiAgICAgICAgICAgIH19IG9uQ2xpY2s9eygpID0+IHtcclxuICAgICAgICAgICAgICAgIHNlYXJjaFZhbHVlID0gb2JqPy5ldm9sdXRpb25zPy5baV0/Lm5hbWVcclxuICAgICAgICAgICAgICAgIHNldFRpbWVvdXQoKCkgPT4ge1xyXG4gICAgICAgICAgICAgICAgICAgIGdldERhdGEoKVxyXG4gICAgICAgICAgICAgICAgfSwgMTAwKVxyXG4gICAgICAgICAgICB9fT57b2JqPy5ldm9sdXRpb25zPy5baV0/Lm5hbWV9PC9hPilcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIDxkaXY+e2Fycn08L2Rpdj5cclxuICAgIH1cclxuXHJcblxyXG5cclxuICAgIGNvbnN0IGhhbmRsZUNoYW5nZSA9IChldmVudCkgPT4ge1xyXG4gICAgICAgIHNlYXJjaFZhbHVlID0gZXZlbnQudGFyZ2V0LnZhbHVlXHJcbiAgICB9XHJcblxyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY29udGFpbmVyJz5cclxuICAgICAgICAgICAgPGgxPlBva2Vtb24gU2VhcmNoPC9oMT5cclxuICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgaWQ9J3NlYXJjaCcgdmFsdWU9e3NlYXJjaFZhbHVlfSBvbkNoYW5nZT17aGFuZGxlQ2hhbmdlfSAvPlxyXG4gICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9e2dldERhdGF9PlNlYXJjaCA8L2J1dHRvbj5cclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiAnZmxleCcsXHJcbiAgICAgICAgICAgICAgICAgICAganVzdGlmeUNvbnRlbnQ6ICdzcGFjZS1iZXR3ZWVuJyxcclxuICAgICAgICAgICAgICAgIH19PlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMiBzdHlsZT17eyB0ZXh0QWxpZ246ICdjZW50ZXInIH19PlJlc3VsdDwvaDI+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7XHJcbiAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogJ2dyaWQnLFxyXG4gICAgICAgICAgICAgICAgICAgIGdyaWRUZW1wbGF0ZUNvbHVtbnM6ICcxZnIgMWZyIDFmciAxZnInLFxyXG4gICAgICAgICAgICAgICAgICAgIGdyaWRHYXA6ICcxMHB4JyxcclxuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAnMTBweCcsXHJcbiAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5OdW1iZXI8L2gyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PntvYmo/Lm51bWJlcn08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5OYW1lPC9oMj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj57b2JqPy5uYW1lfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5XZWlnaHQ8L2gyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiAnZmxleCcsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmbGV4RGlyZWN0aW9uOiAnY29sdW1uJyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PiBNaW5pbXVtIDoge29iaj8ud2VpZ2h0Py5taW5pbXVtfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj4gTWF4aW11bSA6IHtvYmo/LndlaWdodD8ubWF4aW11bX08L2Rpdj5cclxuXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e2Jsb2NrfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGgyPkhlaWdodDwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6ICdmbGV4JyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZsZXhEaXJlY3Rpb246ICdjb2x1bW4nLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+ICBNaW5pbXVtIDogIHtvYmo/LmhlaWdodD8ubWluaW11bX08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+ICBNYXhpbXVtIDoge29iaj8uaGVpZ2h0Py5tYXhpbXVtfTwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiAnZ3JpZCcsXHJcbiAgICAgICAgICAgICAgICAgICAgZ3JpZFRlbXBsYXRlQ29sdW1uczogJzRmciAxZnInLFxyXG4gICAgICAgICAgICAgICAgICAgIGdyaWRHYXA6ICcxMHB4JyxcclxuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAnMTBweCcsXHJcbiAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5BdHRhY2tzPC9oMj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17e1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogJ2ZsZXgnLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAganVzdGlmeUNvbnRlbnQ6ICdzcGFjZS1hcm91bmQnLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge2Zhc3QoKX1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7c3BlY2lhbCgpfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogJ2ZsZXgnLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBmbGV4RGlyZWN0aW9uOiAnY29sdW1uJyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgcm93R2FwOiAnMTBweCcsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGhlaWdodDogJzEwMCUnLFxyXG4gICAgICAgICAgICAgICAgICAgIH19PlxyXG5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17e1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyOiAnMXB4IHNvbGlkIGJsYWNrJyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6ICcxMHB4JyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRleHRBbGlnbjogJ2NlbnRlcicsXHJcblxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5SZXNpc3RhbnQ8L2gyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17YmxvY2tfY2VudGVyfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7cmVzaXN0YW50KCl9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcjogJzFweCBzb2xpZCBibGFjaycsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAnMTBweCcsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0ZXh0QWxpZ246ICdjZW50ZXInLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMj53ZWFrbmVzc2VzPC9oMj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e2Jsb2NrX2NlbnRlcn0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3dlYWtuZXNzZXMoKX1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tcclxuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiAnZ3JpZCcsXHJcbiAgICAgICAgICAgICAgICAgICAgZ3JpZFRlbXBsYXRlQ29sdW1uczogJzFmciAxZnInLFxyXG4gICAgICAgICAgICAgICAgICAgIGdyaWRHYXA6ICcxMHB4JyxcclxuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAnMTBweCcsXHJcbiAgICAgICAgICAgICAgICB9fT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5DbGFzc2lmaWNhdGlvbjwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e29iai5jbGFzc2lmaWNhdGlvbn08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17YmxvY2t9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDI+VHlwZXM8L2gyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PntvYmoudHlwZXN9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7XHJcbiAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogJ2dyaWQnLFxyXG4gICAgICAgICAgICAgICAgICAgIGdyaWRUZW1wbGF0ZUNvbHVtbnM6ICcxZnIgMWZyIDFmcicsXHJcbiAgICAgICAgICAgICAgICAgICAgZ3JpZEdhcDogJzEwcHgnLFxyXG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6ICcxMHB4JyxcclxuICAgICAgICAgICAgICAgIH19PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9e2Jsb2NrfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGgyPk1heCBDUDwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e29iai5tYXhDUH08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXtibG9ja30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoMj5GbGVlIFJhdGU8L2gyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PntvYmouZmxlZVJhdGV9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17YmxvY2t9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDI+RXZvbHV0aW9uPC9oMj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj57ZXZvbHV0aW9uc0xpc3QoKX08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8L2RpdiA+XHJcbiAgICAgICAgPC9kaXYgPilcclxuXHJcbn1cclxuIl0sIm5hbWVzIjpbInVzZVN0YXRlIiwiUmVhY3QiLCJnZXRQb2tlbW9uIiwicmVzcG9uc2VIYW5kbGVyIiwiSG9tZSIsIm9iaiIsInNldE9iaiIsInNlYXJjaFZhbHVlIiwiYmxvY2siLCJib3JkZXIiLCJwYWRkaW5nIiwidGV4dEFsaWduIiwiYmxvY2tfY2VudGVyIiwiZGlzcGxheSIsImZsZXhEaXJlY3Rpb24iLCJjb2x1bW5HYXAiLCJqdXN0aWZ5Q29udGVudCIsImdldERhdGEiLCJwb2tlbW9uIiwicmVzIiwiZmFzdCIsImFyciIsImkiLCJhdHRhY2tzIiwibGVuZ3RoIiwicHVzaCIsIm5hbWUiLCJ0eXBlIiwiZGFtYWdlIiwic3BlY2lhbCIsIndlYWtuZXNzZXMiLCJqb2luIiwicmVzaXN0YW50IiwiZXZvbHV0aW9uc0xpc3QiLCJldm9sdXRpb25zIiwiZm9udFdlaWdodCIsInRleHREZWNvcmF0aW9uIiwiY3Vyc29yIiwiY29sb3IiLCJtYXJnaW4iLCJzZXRUaW1lb3V0IiwiaGFuZGxlQ2hhbmdlIiwiZXZlbnQiLCJ0YXJnZXQiLCJ2YWx1ZSIsImdyaWRUZW1wbGF0ZUNvbHVtbnMiLCJncmlkR2FwIiwibnVtYmVyIiwid2VpZ2h0IiwibWluaW11bSIsIm1heGltdW0iLCJoZWlnaHQiLCJyb3dHYXAiLCJjbGFzc2lmaWNhdGlvbiIsInR5cGVzIiwibWF4Q1AiLCJmbGVlUmF0ZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/index.tsx\n");
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Home)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(719);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_services__WEBPACK_IMPORTED_MODULE_1__]);
+_services__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+
+
+function Home() {
+  const {
+    0: obj,
+    1: setObj
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});
+  let searchValue = 'Pikachu';
+
+  const getData = async () => {
+    const pokemon = (0,_services__WEBPACK_IMPORTED_MODULE_1__.getPokemon)(searchValue);
+    const res = await (0,_services__WEBPACK_IMPORTED_MODULE_1__.responseHandler)(pokemon);
+
+    if (res) {
+      setObj(res);
+    }
+  };
+
+  const fast = () => {
+    const arr = [];
+
+    for (let i = 0; i < obj?.attacks?.fast?.length; i++) {
+      arr.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Name: ", obj?.attacks?.fast?.[i]?.name]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Type: ", obj?.attacks?.fast?.[i]?.type]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Damage: ", obj?.attacks?.fast?.[i]?.damage]
+        })]
+      }));
+    }
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      children: [" ", /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+        children: "Fast"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'flex',
+          columnGap: '20px'
+        },
+        children: [" ", arr, " "]
+      })]
+    });
+  };
+
+  const special = () => {
+    const arr = [];
+
+    for (let i = 0; i < obj?.attacks?.special?.length; i++) {
+      arr.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Name: ", obj?.attacks?.special?.[i]?.name]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Type: ", obj?.attacks?.special?.[i]?.type]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Damage: ", obj?.attacks?.special?.[i]?.damage]
+        })]
+      }));
+    }
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      children: [" ", /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+        children: "Special"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'flex',
+          columnGap: '20px'
+        },
+        children: [" ", arr, " "]
+      })]
+    });
+  };
+
+  const weaknesses = () => {
+    const arr = [];
+
+    for (let i = 0; i < obj?.weaknesses?.length; i++) {
+      arr.push(obj?.weaknesses?.[i]);
+    }
+
+    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+      children: arr.join(', ')
+    });
+  };
+
+  const resistant = () => {
+    const arr = [];
+
+    for (let i = 0; i < obj?.resistant?.length; i++) {
+      arr.push(obj?.resistant?.[i]);
+    }
+
+    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+      children: arr.join(', ')
+    });
+  };
+
+  const evolutionsList = () => {
+    const arr = [];
+    if (obj?.evolutions?.length === 0) return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+      children: " Can\\'t Evolution"
+    });
+
+    for (let i = 0; i < obj?.evolutions?.length; i++) {
+      arr.push( /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("a", {
+        style: {
+          fontWeight: 'bold',
+          textDecoration: 'underline',
+          cursor: 'pointer',
+          color: 'blue',
+          margin: '0 10px'
+        },
+        onClick: () => {
+          searchValue = obj?.evolutions?.[i]?.name;
+          setTimeout(() => {
+            getData();
+          }, 100);
+        },
+        children: obj?.evolutions?.[i]?.name
+      }));
+    }
+
+    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+      children: arr
+    });
+  };
+
+  const handleChange = event => {
+    searchValue = event.target.value;
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "container",
+    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h1", {
+      children: "Pokemon Search"
+    }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("input", {
+      type: "text",
+      id: "search",
+      value: searchValue,
+      onChange: handleChange
+    }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("button", {
+      onClick: getData,
+      children: "Search "
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+        style: {
+          display: 'flex',
+          justifyContent: 'space-between'
+        },
+        children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+          style: {
+            textAlign: 'center'
+          },
+          children: "Result"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr 1fr',
+          gridGap: '10px',
+          padding: '10px'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Number"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj?.number
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Name"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj?.name
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Weight"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            style: {
+              display: 'flex',
+              flexDirection: 'column'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [" Minimum : ", obj?.weight?.minimum]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [" Maximum : ", obj?.weight?.maximum]
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Height"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            style: {
+              display: 'flex',
+              flexDirection: 'column'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: ["  Minimum :  ", obj?.height?.minimum]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: ["  Maximum : ", obj?.height?.maximum]
+            })]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'grid',
+          gridTemplateColumns: '4fr 1fr',
+          gridGap: '10px',
+          padding: '10px'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Attacks"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            style: {
+              display: 'flex',
+              justifyContent: 'space-around'
+            },
+            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+              children: fast()
+            }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+              children: special()
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            display: 'flex',
+            flexDirection: 'column',
+            rowGap: '10px',
+            height: '100%'
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            style: {
+              border: '1px solid black',
+              padding: '10px',
+              textAlign: 'center'
+            },
+            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+              children: "Resistant"
+            }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+              style: {
+                display: 'flex',
+                flexDirection: 'row',
+                columnGap: '10px',
+                justifyContent: 'center'
+              },
+              children: resistant()
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            style: {
+              border: '1px solid black',
+              padding: '10px',
+              textAlign: 'center'
+            },
+            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+              children: "weaknesses"
+            }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+              style: {
+                display: 'flex',
+                flexDirection: 'row',
+                columnGap: '10px',
+                justifyContent: 'center'
+              },
+              children: weaknesses()
+            })]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gridGap: '10px',
+          padding: '10px'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Classification"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj.classification
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Types"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj.types
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        style: {
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gridGap: '10px',
+          padding: '10px'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Max CP"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj.maxCP
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Flee Rate"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: obj.fleeRate
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          style: {
+            border: '1px solid black',
+            padding: '10px',
+            textAlign: 'center'
+          },
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+            children: "Evolution"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
+            children: evolutionsList()
+          })]
+        })]
+      })]
+    })]
+  });
+}
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
-/***/ "./pages/services.ts":
-/*!***************************!*\
-  !*** ./pages/services.ts ***!
-  \***************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getPokemon\": () => (/* binding */ getPokemon),\n/* harmony export */   \"requestPokemon\": () => (/* binding */ requestPokemon),\n/* harmony export */   \"responseHandler\": () => (/* binding */ responseHandler)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);\naxios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\nasync function getPokemon(name) {\n  const res = `\n        query Query {\n            getPokemon(name: \"${name}\") {\n                name\n                number\n                weight {\n                    minimum\n                    maximum\n                }\n                height {\n                    minimum\n                    maximum\n                }\n                classification\n                types\n                resistant\n                attacks {\n                    fast {\n                        name\n                        type\n                        damage\n\n                    }\n                    special {\n                        name\n                        type\n                        damage\n                    }\n                }\n                weaknesses\n                fleeRate\n                maxCP\n                evolutions {\n                    name\n                    number\n                    weight {\n                        minimum\n                        maximum\n                    }\n                    height {\n                        minimum\n                        maximum\n                    }\n                    classification\n                    types\n                    resistant\n                    attacks {\n                        fast {\n                            name\n                            type\n                            damage\n\n                        }\n                        special {\n                            name\n                            type\n                            damage\n                        }\n                    }\n                }\n            }\n        }`;\n  const response = await requestPokemon(res);\n  return response;\n}\nasync function requestPokemon(query) {\n  const res = await (0,axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    method: \"POST\",\n    url: \"/api/graphql\",\n    data: {\n      query: query\n    }\n  }).then(res => {\n    const data = res.data.data.getPokemon;\n    return data;\n  }).catch(err => console.log(err));\n  return res;\n}\nasync function responseHandler(request) {\n  const response = await request;\n  if (!response) alert(\"No data returned\");\n  return response;\n}\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9zZXJ2aWNlcy50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7QUFHTyxlQUFlQyxVQUFmLENBQTBCQyxJQUExQixFQUEwRDtFQUMvRCxNQUFNQyxHQUFHLEdBQUk7QUFDZjtBQUNBLGdDQUFnQ0QsSUFBSztBQUNyQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFVBN0RFO0VBOERBLE1BQU1FLFFBQVEsR0FBRyxNQUFNQyxjQUFjLENBQUNGLEdBQUQsQ0FBckM7RUFDQSxPQUFPQyxRQUFQO0FBQ0Q7QUFFTSxlQUFlQyxjQUFmLENBQThCQyxLQUE5QixFQUErRDtFQUNwRSxNQUFNSCxHQUFHLEdBQUcsTUFBTUgsaURBQUssQ0FBQztJQUN0Qk8sTUFBTSxFQUFFLE1BRGM7SUFFdEJDLEdBQUcsRUFBRSxjQUZpQjtJQUd0QkMsSUFBSSxFQUFFO01BQUVILEtBQUssRUFBRUE7SUFBVDtFQUhnQixDQUFELENBQUwsQ0FLZkksSUFMZSxDQUtUUCxHQUFELElBQVM7SUFDYixNQUFNTSxJQUFJLEdBQUdOLEdBQUcsQ0FBQ00sSUFBSixDQUFTQSxJQUFULENBQWNSLFVBQTNCO0lBQ0EsT0FBT1EsSUFBUDtFQUNELENBUmUsRUFTZkUsS0FUZSxDQVNSQyxHQUFELElBQVNDLE9BQU8sQ0FBQ0MsR0FBUixDQUFZRixHQUFaLENBVEEsQ0FBbEI7RUFVQSxPQUFPVCxHQUFQO0FBQ0Q7QUFFTSxlQUFlWSxlQUFmLENBQWtDQyxPQUFsQyxFQUFtRTtFQUN4RSxNQUFNWixRQUFRLEdBQUcsTUFBTVksT0FBdkI7RUFDQSxJQUFJLENBQUNaLFFBQUwsRUFBZWEsS0FBSyxDQUFDLGtCQUFELENBQUw7RUFDZixPQUFPYixRQUFQO0FBQ0QsQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2VzL3NlcnZpY2VzLnRzPzQwMGQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF4aW9zIGZyb20gXCJheGlvc1wiO1xyXG5pbXBvcnQgeyBQb2tlbW9uIH0gZnJvbSBcIi4vbW9kZWxcIjtcclxuXHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRQb2tlbW9uKG5hbWU6IHN0cmluZyk6IFByb21pc2U8UG9rZW1vbj4ge1xyXG4gIGNvbnN0IHJlcyA9IGBcclxuICAgICAgICBxdWVyeSBRdWVyeSB7XHJcbiAgICAgICAgICAgIGdldFBva2Vtb24obmFtZTogXCIke25hbWV9XCIpIHtcclxuICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgIG51bWJlclxyXG4gICAgICAgICAgICAgICAgd2VpZ2h0IHtcclxuICAgICAgICAgICAgICAgICAgICBtaW5pbXVtXHJcbiAgICAgICAgICAgICAgICAgICAgbWF4aW11bVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgaGVpZ2h0IHtcclxuICAgICAgICAgICAgICAgICAgICBtaW5pbXVtXHJcbiAgICAgICAgICAgICAgICAgICAgbWF4aW11bVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgY2xhc3NpZmljYXRpb25cclxuICAgICAgICAgICAgICAgIHR5cGVzXHJcbiAgICAgICAgICAgICAgICByZXNpc3RhbnRcclxuICAgICAgICAgICAgICAgIGF0dGFja3Mge1xyXG4gICAgICAgICAgICAgICAgICAgIGZhc3Qge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBuYW1lXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGVcclxuICAgICAgICAgICAgICAgICAgICAgICAgZGFtYWdlXHJcblxyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgICAgICBzcGVjaWFsIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgbmFtZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICB0eXBlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGRhbWFnZVxyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIHdlYWtuZXNzZXNcclxuICAgICAgICAgICAgICAgIGZsZWVSYXRlXHJcbiAgICAgICAgICAgICAgICBtYXhDUFxyXG4gICAgICAgICAgICAgICAgZXZvbHV0aW9ucyB7XHJcbiAgICAgICAgICAgICAgICAgICAgbmFtZVxyXG4gICAgICAgICAgICAgICAgICAgIG51bWJlclxyXG4gICAgICAgICAgICAgICAgICAgIHdlaWdodCB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG1pbmltdW1cclxuICAgICAgICAgICAgICAgICAgICAgICAgbWF4aW11bVxyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgICAgICBoZWlnaHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBtaW5pbXVtXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG1heGltdW1cclxuICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3NpZmljYXRpb25cclxuICAgICAgICAgICAgICAgICAgICB0eXBlc1xyXG4gICAgICAgICAgICAgICAgICAgIHJlc2lzdGFudFxyXG4gICAgICAgICAgICAgICAgICAgIGF0dGFja3Mge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBmYXN0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhbWFnZVxyXG5cclxuICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzcGVjaWFsIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhbWFnZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfWA7XHJcbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCByZXF1ZXN0UG9rZW1vbihyZXMpO1xyXG4gIHJldHVybiByZXNwb25zZTtcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlcXVlc3RQb2tlbW9uKHF1ZXJ5OiBzdHJpbmcpOiBQcm9taXNlPFBva2Vtb24+IHtcclxuICBjb25zdCByZXMgPSBhd2FpdCBheGlvcyh7XHJcbiAgICBtZXRob2Q6IFwiUE9TVFwiLFxyXG4gICAgdXJsOiBcIi9hcGkvZ3JhcGhxbFwiLFxyXG4gICAgZGF0YTogeyBxdWVyeTogcXVlcnkgfSxcclxuICB9KVxyXG4gICAgLnRoZW4oKHJlcykgPT4ge1xyXG4gICAgICBjb25zdCBkYXRhID0gcmVzLmRhdGEuZGF0YS5nZXRQb2tlbW9uO1xyXG4gICAgICByZXR1cm4gZGF0YTtcclxuICAgIH0pXHJcbiAgICAuY2F0Y2goKGVycikgPT4gY29uc29sZS5sb2coZXJyKSk7XHJcbiAgcmV0dXJuIHJlcztcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlc3BvbnNlSGFuZGxlcjxUPihyZXF1ZXN0OiBQcm9taXNlPFQ+KTogUHJvbWlzZTxUPiB7XHJcbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCByZXF1ZXN0O1xyXG4gIGlmICghcmVzcG9uc2UpIGFsZXJ0KFwiTm8gZGF0YSByZXR1cm5lZFwiKTtcclxuICByZXR1cm4gcmVzcG9uc2U7XHJcbn1cclxuIl0sIm5hbWVzIjpbImF4aW9zIiwiZ2V0UG9rZW1vbiIsIm5hbWUiLCJyZXMiLCJyZXNwb25zZSIsInJlcXVlc3RQb2tlbW9uIiwicXVlcnkiLCJtZXRob2QiLCJ1cmwiLCJkYXRhIiwidGhlbiIsImNhdGNoIiwiZXJyIiwiY29uc29sZSIsImxvZyIsInJlc3BvbnNlSGFuZGxlciIsInJlcXVlc3QiLCJhbGVydCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/services.ts\n");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
+/***/ 924:
 /***/ ((module) => {
 
 module.exports = import("axios");;
@@ -70,7 +424,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/index.tsx"));
+var __webpack_exports__ = __webpack_require__.X(0, [719], () => (__webpack_exec__(119)));
 module.exports = __webpack_exports__;
 
 })();

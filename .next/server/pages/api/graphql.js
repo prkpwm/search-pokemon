@@ -1,105 +1,130 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/graphql";
-exports.ids = ["pages/api/graphql"];
+exports.id = 702;
+exports.ids = [702,432,665,236,54];
 exports.modules = {
 
-/***/ "apollo-server-core":
-/*!*************************************!*\
-  !*** external "apollo-server-core" ***!
-  \*************************************/
+/***/ 342:
 /***/ ((module) => {
 
 module.exports = require("apollo-server-core");
 
 /***/ }),
 
-/***/ "apollo-server-micro":
-/*!**************************************!*\
-  !*** external "apollo-server-micro" ***!
-  \**************************************/
+/***/ 352:
 /***/ ((module) => {
 
 module.exports = require("apollo-server-micro");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
+/***/ 924:
 /***/ ((module) => {
 
 module.exports = import("axios");;
 
 /***/ }),
 
-/***/ "(api)/./pages/api/data/index.ts":
-/*!*********************************!*\
-  !*** ./pages/api/data/index.ts ***!
-  \*********************************/
+/***/ 792:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getPokemon\": () => (/* binding */ getPokemon)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);\naxios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\nconst getPokemon = async name => {\n  return new Promise((resolve, reject) => {\n    (0,axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n      method: \"POST\",\n      url: \"https://graphql-pokemon2.vercel.app/\",\n      data: {\n        query: `\n                query Query {\n                    pokemon(name: \"${name}\") {\n                        name\n                        number\n                        weight {\n                            minimum\n                            maximum\n                        }\n                        height {\n                            minimum\n                            maximum\n                        }\n                        classification\n                        types\n                        resistant\n                        attacks {\n                            fast {\n                                name\n                                type\n                                damage\n  \n                            }\n                            special {\n                                name\n                                type\n                                damage\n                            }\n                        }\n                          weaknesses\n                          fleeRate\n                          maxCP\n                          evolutions {\n                              name\n                              number\n                              weight {\n                                  minimum\n                                  maximum\n                              }\n                              height {\n                                  minimum\n                                  maximum\n                              }\n                              classification\n                              types\n                              resistant\n                              attacks {\n                                  fast {\n                                      name\n                                      type\n                                      damage\n    \n                                  }\n                                  special {\n                                      name\n                                      type\n                                      damage\n                                  }\n                              }\n                          }\n                    }\n                }\n            `\n      }\n    }).then(res => {\n      resolve(res.data.data.pokemon);\n    }).catch(err => reject(err));\n  });\n};\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvZGF0YS9pbmRleC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBR08sTUFBTUMsVUFBVSxHQUFHLE1BQU9DLElBQVAsSUFBMEM7RUFDbEUsT0FBTyxJQUFJQyxPQUFKLENBQVksQ0FBQ0MsT0FBRCxFQUFVQyxNQUFWLEtBQXFCO0lBQ3RDTCxpREFBSyxDQUFDO01BQ0pNLE1BQU0sRUFBRSxNQURKO01BRUpDLEdBQUcsRUFBRSxzQ0FGRDtNQUdKQyxJQUFJLEVBQUU7UUFDSkMsS0FBSyxFQUFHO0FBQ2hCO0FBQ0EscUNBQXFDUCxJQUFLO0FBQzFDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtNQS9EWTtJQUhGLENBQUQsQ0FBTCxDQXFFR1EsSUFyRUgsQ0FxRVNDLEdBQUQsSUFBUztNQUNiUCxPQUFPLENBQUNPLEdBQUcsQ0FBQ0gsSUFBSixDQUFTQSxJQUFULENBQWNJLE9BQWYsQ0FBUDtJQUNELENBdkVILEVBd0VHQyxLQXhFSCxDQXdFVUMsR0FBRCxJQUFTVCxNQUFNLENBQUNTLEdBQUQsQ0F4RXhCO0VBeUVELENBMUVNLENBQVA7QUEyRUQsQ0E1RU0sQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2VzL2FwaS9kYXRhL2luZGV4LnRzP2Y3NmQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF4aW9zIGZyb20gXCJheGlvc1wiO1xyXG5pbXBvcnQgeyBQb2tlbW9uIH0gZnJvbSBcIi4uLy4uL21vZGVsXCI7XHJcblxyXG5leHBvcnQgY29uc3QgZ2V0UG9rZW1vbiA9IGFzeW5jIChuYW1lOiBzdHJpbmcpOiBQcm9taXNlPFBva2Vtb24+ID0+IHtcclxuICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xyXG4gICAgYXhpb3Moe1xyXG4gICAgICBtZXRob2Q6IFwiUE9TVFwiLFxyXG4gICAgICB1cmw6IFwiaHR0cHM6Ly9ncmFwaHFsLXBva2Vtb24yLnZlcmNlbC5hcHAvXCIsXHJcbiAgICAgIGRhdGE6IHtcclxuICAgICAgICBxdWVyeTogYFxyXG4gICAgICAgICAgICAgICAgcXVlcnkgUXVlcnkge1xyXG4gICAgICAgICAgICAgICAgICAgIHBva2Vtb24obmFtZTogXCIke25hbWV9XCIpIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgbmFtZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBudW1iZXJcclxuICAgICAgICAgICAgICAgICAgICAgICAgd2VpZ2h0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1pbmltdW1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heGltdW1cclxuICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWluaW11bVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWF4aW11bVxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzaWZpY2F0aW9uXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGVzXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHJlc2lzdGFudFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBhdHRhY2tzIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhc3Qge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGFtYWdlXHJcbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzcGVjaWFsIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuYW1lXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhbWFnZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgd2Vha25lc3Nlc1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGZsZWVSYXRlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgbWF4Q1BcclxuICAgICAgICAgICAgICAgICAgICAgICAgICBldm9sdXRpb25zIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmFtZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBudW1iZXJcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgd2VpZ2h0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1pbmltdW1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heGltdW1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbWluaW11bVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbWF4aW11bVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzaWZpY2F0aW9uXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGVzXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJlc2lzdGFudFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhdHRhY2tzIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhc3Qge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGFtYWdlXHJcbiAgICBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNwZWNpYWwge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGFtYWdlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBgLFxyXG4gICAgICB9LFxyXG4gICAgfSlcclxuICAgICAgLnRoZW4oKHJlcykgPT4ge1xyXG4gICAgICAgIHJlc29sdmUocmVzLmRhdGEuZGF0YS5wb2tlbW9uKTtcclxuICAgICAgfSlcclxuICAgICAgLmNhdGNoKChlcnIpID0+IHJlamVjdChlcnIpKTtcclxuICB9KTtcclxufTtcclxuIl0sIm5hbWVzIjpbImF4aW9zIiwiZ2V0UG9rZW1vbiIsIm5hbWUiLCJQcm9taXNlIiwicmVzb2x2ZSIsInJlamVjdCIsIm1ldGhvZCIsInVybCIsImRhdGEiLCJxdWVyeSIsInRoZW4iLCJyZXMiLCJwb2tlbW9uIiwiY2F0Y2giLCJlcnIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/data/index.ts\n");
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "config": () => (/* binding */ config),
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(352);
+/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var apollo_server_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(342);
+/* harmony import */ var apollo_server_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_server_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(603);
+/* harmony import */ var _resolver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(889);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_resolver__WEBPACK_IMPORTED_MODULE_3__]);
+_resolver__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+
+const apolloServer = new apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__.ApolloServer({
+  typeDefs: _schema__WEBPACK_IMPORTED_MODULE_2__.typeDefs,
+  resolvers: _resolver__WEBPACK_IMPORTED_MODULE_3__.resolvers,
+  plugins: [(0,apollo_server_core__WEBPACK_IMPORTED_MODULE_1__.ApolloServerPluginLandingPageGraphQLPlayground)()]
+});
+const config = {
+  api: {
+    bodyParser: false
+  }
+};
+const startServer = apolloServer.start();
+async function handler(req, res) {
+  await startServer;
+  await apolloServer.createHandler({
+    path: "/api/graphql"
+  })(req, res);
+}
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
-/***/ "(api)/./pages/api/graphql.ts":
-/*!******************************!*\
-  !*** ./pages/api/graphql.ts ***!
-  \******************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"config\": () => (/* binding */ config),\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-server-micro */ \"apollo-server-micro\");\n/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var apollo_server_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-server-core */ \"apollo-server-core\");\n/* harmony import */ var apollo_server_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_server_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./schema */ \"(api)/./pages/api/schema/index.ts\");\n/* harmony import */ var _resolver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./resolver */ \"(api)/./pages/api/resolver/index.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_resolver__WEBPACK_IMPORTED_MODULE_3__]);\n_resolver__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\nconst apolloServer = new apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__.ApolloServer({\n  typeDefs: _schema__WEBPACK_IMPORTED_MODULE_2__.typeDefs,\n  resolvers: _resolver__WEBPACK_IMPORTED_MODULE_3__.resolvers,\n  plugins: [(0,apollo_server_core__WEBPACK_IMPORTED_MODULE_1__.ApolloServerPluginLandingPageGraphQLPlayground)()]\n});\nconst config = {\n  api: {\n    bodyParser: false\n  }\n};\nconst startServer = apolloServer.start();\nasync function handler(req, res) {\n  await startServer;\n  await apolloServer.createHandler({\n    path: \"/api/graphql\"\n  })(req, res);\n}\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvZ3JhcGhxbC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUEsTUFBTUksWUFBWSxHQUFHLElBQUlKLDZEQUFKLENBQWlCO0VBQ3BDRSxRQURvQztFQUVwQ0MsU0FGb0M7RUFHcENFLE9BQU8sRUFBRSxDQUFDSixrR0FBOEMsRUFBL0M7QUFIMkIsQ0FBakIsQ0FBckI7QUFNTyxNQUFNSyxNQUFNLEdBQUc7RUFDcEJDLEdBQUcsRUFBRTtJQUNIQyxVQUFVLEVBQUU7RUFEVDtBQURlLENBQWY7QUFNUCxNQUFNQyxXQUFXLEdBQUdMLFlBQVksQ0FBQ00sS0FBYixFQUFwQjtBQUVlLGVBQWVDLE9BQWYsQ0FBdUJDLEdBQXZCLEVBQTRCQyxHQUE1QixFQUFpQztFQUM5QyxNQUFNSixXQUFOO0VBQ0EsTUFBTUwsWUFBWSxDQUFDVSxhQUFiLENBQTJCO0lBQy9CQyxJQUFJLEVBQUU7RUFEeUIsQ0FBM0IsRUFFSEgsR0FGRyxFQUVFQyxHQUZGLENBQU47QUFHRCxDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcGFnZXMvYXBpL2dyYXBocWwudHM/ZWExZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBcG9sbG9TZXJ2ZXIsIGdxbCB9IGZyb20gXCJhcG9sbG8tc2VydmVyLW1pY3JvXCI7XHJcbmltcG9ydCB7IEFwb2xsb1NlcnZlclBsdWdpbkxhbmRpbmdQYWdlR3JhcGhRTFBsYXlncm91bmQgfSBmcm9tIFwiYXBvbGxvLXNlcnZlci1jb3JlXCI7XHJcbmltcG9ydCB7IHR5cGVEZWZzIH0gZnJvbSBcIi4vc2NoZW1hXCI7XHJcbmltcG9ydCB7IHJlc29sdmVycyB9IGZyb20gXCIuL3Jlc29sdmVyXCI7XHJcblxyXG5jb25zdCBhcG9sbG9TZXJ2ZXIgPSBuZXcgQXBvbGxvU2VydmVyKHtcclxuICB0eXBlRGVmcyxcclxuICByZXNvbHZlcnMsXHJcbiAgcGx1Z2luczogW0Fwb2xsb1NlcnZlclBsdWdpbkxhbmRpbmdQYWdlR3JhcGhRTFBsYXlncm91bmQoKV0sXHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IGNvbmZpZyA9IHtcclxuICBhcGk6IHtcclxuICAgIGJvZHlQYXJzZXI6IGZhbHNlLFxyXG4gIH0sXHJcbn07XHJcblxyXG5jb25zdCBzdGFydFNlcnZlciA9IGFwb2xsb1NlcnZlci5zdGFydCgpO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlcihyZXEsIHJlcykge1xyXG4gIGF3YWl0IHN0YXJ0U2VydmVyO1xyXG4gIGF3YWl0IGFwb2xsb1NlcnZlci5jcmVhdGVIYW5kbGVyKHtcclxuICAgIHBhdGg6IFwiL2FwaS9ncmFwaHFsXCIsXHJcbiAgfSkocmVxLCByZXMpO1xyXG59XHJcbiJdLCJuYW1lcyI6WyJBcG9sbG9TZXJ2ZXIiLCJBcG9sbG9TZXJ2ZXJQbHVnaW5MYW5kaW5nUGFnZUdyYXBoUUxQbGF5Z3JvdW5kIiwidHlwZURlZnMiLCJyZXNvbHZlcnMiLCJhcG9sbG9TZXJ2ZXIiLCJwbHVnaW5zIiwiY29uZmlnIiwiYXBpIiwiYm9keVBhcnNlciIsInN0YXJ0U2VydmVyIiwic3RhcnQiLCJoYW5kbGVyIiwicmVxIiwicmVzIiwiY3JlYXRlSGFuZGxlciIsInBhdGgiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/graphql.ts\n");
-
-/***/ }),
-
-/***/ "(api)/./pages/api/handler.ts":
-/*!******************************!*\
-  !*** ./pages/api/handler.ts ***!
-  \******************************/
+/***/ 603:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"graphQLErrorHandler\": () => (/* binding */ graphQLErrorHandler),\n/* harmony export */   \"graphQLHandler\": () => (/* binding */ graphQLHandler)\n/* harmony export */ });\nconst graphQLHandler = ({\n  handler,\n  validator\n}) => async (root, args, context) => {\n  try {\n    const returnValue = await handler(root, args, context);\n    const validate = await validator(returnValue);\n    return validate;\n  } catch (err) {\n    graphQLErrorHandler(err);\n  }\n};\nfunction graphQLErrorHandler(err) {\n  const errType = err.name;\n\n  switch (errType) {\n    case \"TypeError\":\n      throw new Error(`[${errType}]Message: ${err.message}`);\n\n    default:\n      throw new Error(`[Unexpected Internal Error]Message: ${err.message ? err.message : \"\"}`);\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvaGFuZGxlci50cy5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFPLE1BQU1BLGNBQWMsR0FDekIsQ0FBQztFQUFFQyxPQUFGO0VBQVdDO0FBQVgsQ0FBRCxLQUNBLE9BQU9DLElBQVAsRUFBa0JDLElBQWxCLEVBQTZCQyxPQUE3QixLQUE4QztFQUM1QyxJQUFJO0lBQ0YsTUFBTUMsV0FBVyxHQUFHLE1BQU1MLE9BQU8sQ0FBQ0UsSUFBRCxFQUFPQyxJQUFQLEVBQWFDLE9BQWIsQ0FBakM7SUFDQSxNQUFNRSxRQUFRLEdBQUcsTUFBTUwsU0FBUyxDQUFDSSxXQUFELENBQWhDO0lBQ0EsT0FBT0MsUUFBUDtFQUNELENBSkQsQ0FJRSxPQUFPQyxHQUFQLEVBQVk7SUFDWkMsbUJBQW1CLENBQUNELEdBQUQsQ0FBbkI7RUFDRDtBQUNGLENBVkk7QUFZQSxTQUFTQyxtQkFBVCxDQUE2QkQsR0FBN0IsRUFBa0M7RUFDdkMsTUFBTUUsT0FBTyxHQUFHRixHQUFHLENBQUNHLElBQXBCOztFQUNBLFFBQVFELE9BQVI7SUFDRSxLQUFLLFdBQUw7TUFDRSxNQUFNLElBQUlFLEtBQUosQ0FBVyxJQUFHRixPQUFRLGFBQVlGLEdBQUcsQ0FBQ0ssT0FBUSxFQUE5QyxDQUFOOztJQUNGO01BQ0UsTUFBTSxJQUFJRCxLQUFKLENBQ0gsdUNBQXNDSixHQUFHLENBQUNLLE9BQUosR0FBY0wsR0FBRyxDQUFDSyxPQUFsQixHQUE0QixFQUFHLEVBRGxFLENBQU47RUFKSjtBQVFEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcGFnZXMvYXBpL2hhbmRsZXIudHM/MTU0OSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgZ3JhcGhRTEhhbmRsZXIgPVxyXG4gICh7IGhhbmRsZXIsIHZhbGlkYXRvciB9KSA9PlxyXG4gIGFzeW5jIChyb290OiBhbnksIGFyZ3M6IGFueSwgY29udGV4dDogYW55KSA9PiB7XHJcbiAgICB0cnkge1xyXG4gICAgICBjb25zdCByZXR1cm5WYWx1ZSA9IGF3YWl0IGhhbmRsZXIocm9vdCwgYXJncywgY29udGV4dCk7XHJcbiAgICAgIGNvbnN0IHZhbGlkYXRlID0gYXdhaXQgdmFsaWRhdG9yKHJldHVyblZhbHVlKTtcclxuICAgICAgcmV0dXJuIHZhbGlkYXRlO1xyXG4gICAgfSBjYXRjaCAoZXJyKSB7XHJcbiAgICAgIGdyYXBoUUxFcnJvckhhbmRsZXIoZXJyKTtcclxuICAgIH1cclxuICB9O1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGdyYXBoUUxFcnJvckhhbmRsZXIoZXJyKSB7XHJcbiAgY29uc3QgZXJyVHlwZSA9IGVyci5uYW1lO1xyXG4gIHN3aXRjaCAoZXJyVHlwZSkge1xyXG4gICAgY2FzZSBcIlR5cGVFcnJvclwiOlxyXG4gICAgICB0aHJvdyBuZXcgRXJyb3IoYFske2VyclR5cGV9XU1lc3NhZ2U6ICR7ZXJyLm1lc3NhZ2V9YCk7XHJcbiAgICBkZWZhdWx0OlxyXG4gICAgICB0aHJvdyBuZXcgRXJyb3IoXHJcbiAgICAgICAgYFtVbmV4cGVjdGVkIEludGVybmFsIEVycm9yXU1lc3NhZ2U6ICR7ZXJyLm1lc3NhZ2UgPyBlcnIubWVzc2FnZSA6IFwiXCJ9YFxyXG4gICAgICApO1xyXG4gIH1cclxufVxyXG4iXSwibmFtZXMiOlsiZ3JhcGhRTEhhbmRsZXIiLCJoYW5kbGVyIiwidmFsaWRhdG9yIiwicm9vdCIsImFyZ3MiLCJjb250ZXh0IiwicmV0dXJuVmFsdWUiLCJ2YWxpZGF0ZSIsImVyciIsImdyYXBoUUxFcnJvckhhbmRsZXIiLCJlcnJUeXBlIiwibmFtZSIsIkVycm9yIiwibWVzc2FnZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/handler.ts\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "typeDefs": () => (/* binding */ typeDefs)
+/* harmony export */ });
+/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(352);
+/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__);
 
-/***/ }),
+const typeDefs = apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__.gql`
+  type Pokemon {
+    number: String
+    name: String
+    weight: Weight
+    height: Height
+    classification: String
+    types: [String]
+    resistant: [String]
+    attacks: Attacks
+    weaknesses: [String]
+    fleeRate: Float
+    maxCP: Int
+    evolutions: [Pokemon]
+  }
+  type Weight {
+    minimum: String
+    maximum: String
+  }
 
-/***/ "(api)/./pages/api/resolver/index.ts":
-/*!*************************************!*\
-  !*** ./pages/api/resolver/index.ts ***!
-  \*************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+  type Height {
+    minimum: String
+    maximum: String
+  }
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"resolvers\": () => (/* binding */ resolvers)\n/* harmony export */ });\n/* harmony import */ var _handler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../handler */ \"(api)/./pages/api/handler.ts\");\n/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services */ \"(api)/./pages/api/services/index.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_services__WEBPACK_IMPORTED_MODULE_1__]);\n_services__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\nconst resolvers = {\n  Query: {\n    getPokemon: (0,_handler__WEBPACK_IMPORTED_MODULE_0__.graphQLHandler)({\n      handler: async (root, args, context) => await (0,_services__WEBPACK_IMPORTED_MODULE_1__.getPokemon)(args.name),\n      validator: res => {\n        if (!res) throw new Error(\"No data returned\");\n        return res;\n      }\n    })\n  }\n};\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcmVzb2x2ZXIvaW5kZXgudHMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUVPLE1BQU1FLFNBQVMsR0FBRztFQUN2QkMsS0FBSyxFQUFFO0lBQ0xGLFVBQVUsRUFBRUQsd0RBQWMsQ0FBQztNQUN6QkksT0FBTyxFQUFFLE9BQU9DLElBQVAsRUFBYUMsSUFBYixFQUFtQkMsT0FBbkIsS0FBK0IsTUFBTU4scURBQVUsQ0FBQ0ssSUFBSSxDQUFDRSxJQUFOLENBRC9CO01BRXpCQyxTQUFTLEVBQUdDLEdBQUQsSUFBUztRQUNsQixJQUFJLENBQUNBLEdBQUwsRUFBVSxNQUFNLElBQUlDLEtBQUosQ0FBVSxrQkFBVixDQUFOO1FBQ1YsT0FBT0QsR0FBUDtNQUNEO0lBTHdCLENBQUQ7RUFEckI7QUFEZ0IsQ0FBbEIsQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2VzL2FwaS9yZXNvbHZlci9pbmRleC50cz83ZjFiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdyYXBoUUxIYW5kbGVyIH0gZnJvbSBcIi4uL2hhbmRsZXJcIjtcclxuaW1wb3J0IHsgZ2V0UG9rZW1vbiB9IGZyb20gXCIuLi9zZXJ2aWNlc1wiO1xyXG5cclxuZXhwb3J0IGNvbnN0IHJlc29sdmVycyA9IHtcclxuICBRdWVyeToge1xyXG4gICAgZ2V0UG9rZW1vbjogZ3JhcGhRTEhhbmRsZXIoe1xyXG4gICAgICBoYW5kbGVyOiBhc3luYyAocm9vdCwgYXJncywgY29udGV4dCkgPT4gYXdhaXQgZ2V0UG9rZW1vbihhcmdzLm5hbWUpLFxyXG4gICAgICB2YWxpZGF0b3I6IChyZXMpID0+IHtcclxuICAgICAgICBpZiAoIXJlcykgdGhyb3cgbmV3IEVycm9yKFwiTm8gZGF0YSByZXR1cm5lZFwiKTtcclxuICAgICAgICByZXR1cm4gcmVzO1xyXG4gICAgICB9LFxyXG4gICAgfSksXHJcbiAgfSxcclxufTtcclxuIl0sIm5hbWVzIjpbImdyYXBoUUxIYW5kbGVyIiwiZ2V0UG9rZW1vbiIsInJlc29sdmVycyIsIlF1ZXJ5IiwiaGFuZGxlciIsInJvb3QiLCJhcmdzIiwiY29udGV4dCIsIm5hbWUiLCJ2YWxpZGF0b3IiLCJyZXMiLCJFcnJvciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/resolver/index.ts\n");
+  type Attacks {
+    fast: [Fast]
+    special: [Special]
+  }
 
-/***/ }),
+  type Fast {
+    name: String
+    type: String
+    damage: Int
+  }
 
-/***/ "(api)/./pages/api/schema/index.ts":
-/*!***********************************!*\
-  !*** ./pages/api/schema/index.ts ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+  type Special {
+    name: String
+    type: String
+    damage: Int
+  }
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"typeDefs\": () => (/* binding */ typeDefs)\n/* harmony export */ });\n/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-server-micro */ \"apollo-server-micro\");\n/* harmony import */ var apollo_server_micro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__);\n\nconst typeDefs = apollo_server_micro__WEBPACK_IMPORTED_MODULE_0__.gql`\n  type Pokemon {\n    number: String\n    name: String\n    weight: Weight\n    height: Height\n    classification: String\n    types: [String]\n    resistant: [String]\n    attacks: Attacks\n    weaknesses: [String]\n    fleeRate: Float\n    maxCP: Int\n    evolutions: [Pokemon]\n  }\n  type Weight {\n    minimum: String\n    maximum: String\n  }\n\n  type Height {\n    minimum: String\n    maximum: String\n  }\n\n  type Attacks {\n    fast: [Fast]\n    special: [Special]\n  }\n\n  type Fast {\n    name: String\n    type: String\n    damage: Int\n  }\n\n  type Special {\n    name: String\n    type: String\n    damage: Int\n  }\n\n  type Query {\n    getPokemon(name: String!): Pokemon\n  }\n`;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvc2NoZW1hL2luZGV4LnRzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBRU8sTUFBTUMsUUFBUSxHQUFHRCxvREFBSTtBQUM1QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsQ0E3Q08iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9hcGkvc2NoZW1hL2luZGV4LnRzPzlmYTUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZ3FsIH0gZnJvbSBcImFwb2xsby1zZXJ2ZXItbWljcm9cIjtcclxuXHJcbmV4cG9ydCBjb25zdCB0eXBlRGVmcyA9IGdxbGBcclxuICB0eXBlIFBva2Vtb24ge1xyXG4gICAgbnVtYmVyOiBTdHJpbmdcclxuICAgIG5hbWU6IFN0cmluZ1xyXG4gICAgd2VpZ2h0OiBXZWlnaHRcclxuICAgIGhlaWdodDogSGVpZ2h0XHJcbiAgICBjbGFzc2lmaWNhdGlvbjogU3RyaW5nXHJcbiAgICB0eXBlczogW1N0cmluZ11cclxuICAgIHJlc2lzdGFudDogW1N0cmluZ11cclxuICAgIGF0dGFja3M6IEF0dGFja3NcclxuICAgIHdlYWtuZXNzZXM6IFtTdHJpbmddXHJcbiAgICBmbGVlUmF0ZTogRmxvYXRcclxuICAgIG1heENQOiBJbnRcclxuICAgIGV2b2x1dGlvbnM6IFtQb2tlbW9uXVxyXG4gIH1cclxuICB0eXBlIFdlaWdodCB7XHJcbiAgICBtaW5pbXVtOiBTdHJpbmdcclxuICAgIG1heGltdW06IFN0cmluZ1xyXG4gIH1cclxuXHJcbiAgdHlwZSBIZWlnaHQge1xyXG4gICAgbWluaW11bTogU3RyaW5nXHJcbiAgICBtYXhpbXVtOiBTdHJpbmdcclxuICB9XHJcblxyXG4gIHR5cGUgQXR0YWNrcyB7XHJcbiAgICBmYXN0OiBbRmFzdF1cclxuICAgIHNwZWNpYWw6IFtTcGVjaWFsXVxyXG4gIH1cclxuXHJcbiAgdHlwZSBGYXN0IHtcclxuICAgIG5hbWU6IFN0cmluZ1xyXG4gICAgdHlwZTogU3RyaW5nXHJcbiAgICBkYW1hZ2U6IEludFxyXG4gIH1cclxuXHJcbiAgdHlwZSBTcGVjaWFsIHtcclxuICAgIG5hbWU6IFN0cmluZ1xyXG4gICAgdHlwZTogU3RyaW5nXHJcbiAgICBkYW1hZ2U6IEludFxyXG4gIH1cclxuXHJcbiAgdHlwZSBRdWVyeSB7XHJcbiAgICBnZXRQb2tlbW9uKG5hbWU6IFN0cmluZyEpOiBQb2tlbW9uXHJcbiAgfVxyXG5gO1xyXG4iXSwibmFtZXMiOlsiZ3FsIiwidHlwZURlZnMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/schema/index.ts\n");
-
-/***/ }),
-
-/***/ "(api)/./pages/api/services/index.ts":
-/*!*************************************!*\
-  !*** ./pages/api/services/index.ts ***!
-  \*************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getPokemon\": () => (/* binding */ getPokemon)\n/* harmony export */ });\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data */ \"(api)/./pages/api/data/index.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_data__WEBPACK_IMPORTED_MODULE_0__]);\n_data__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\nconst getPokemon = async name => {\n  const res = await _data__WEBPACK_IMPORTED_MODULE_0__.getPokemon(name);\n  return res ?? null;\n};\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvc2VydmljZXMvaW5kZXgudHMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFDQTtBQUVPLE1BQU1DLFVBQVUsR0FBRyxNQUFPQyxJQUFQLElBQTBDO0VBQ2xFLE1BQU1DLEdBQUcsR0FBRyxNQUFNSCw2Q0FBQSxDQUFnQkUsSUFBaEIsQ0FBbEI7RUFDQSxPQUFPQyxHQUFHLElBQUksSUFBZDtBQUNELENBSE0sQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2VzL2FwaS9zZXJ2aWNlcy9pbmRleC50cz81ZWY5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFBva2Vtb24gfSBmcm9tIFwiLi4vLi4vbW9kZWxcIjtcclxuaW1wb3J0ICogYXMgZGF0YSBmcm9tIFwiLi4vZGF0YVwiO1xyXG5cclxuZXhwb3J0IGNvbnN0IGdldFBva2Vtb24gPSBhc3luYyAobmFtZTogc3RyaW5nKTogUHJvbWlzZTxQb2tlbW9uPiA9PiB7XHJcbiAgY29uc3QgcmVzID0gYXdhaXQgZGF0YS5nZXRQb2tlbW9uKG5hbWUpO1xyXG4gIHJldHVybiByZXMgPz8gbnVsbDtcclxufTtcclxuIl0sIm5hbWVzIjpbImRhdGEiLCJnZXRQb2tlbW9uIiwibmFtZSIsInJlcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/services/index.ts\n");
+  type Query {
+    getPokemon(name: String!): Pokemon
+  }
+`;
 
 /***/ })
 
@@ -110,7 +135,7 @@ eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/graphql.ts"));
+var __webpack_exports__ = __webpack_require__.X(0, [654,889], () => (__webpack_exec__(792)));
 module.exports = __webpack_exports__;
 
 })();
