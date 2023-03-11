@@ -5,7 +5,7 @@ import { Pokemon } from '../model'
 
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
-    const [searchValue, setSearchValue] = useState('Pikachu')
+    const [searchValue, setSearchValue] = useState('Bulbasaur')
     
 
     const getData = async () => {
