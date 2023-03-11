@@ -5,7 +5,8 @@ import { Pokemon } from '../model'
 
 export default function Home() {
     const [obj, setObj] = useState({} as Pokemon)
-    let searchValue = 'Pikachu'
+    const [searchValue, setSearchValue] = useState('Pikachu')
+    
 
     const getData = async () => {
         const pokemon = getPokemon(searchValue)
@@ -69,11 +70,14 @@ export default function Home() {
                 cursor: 'pointer',
                 color: 'blue',
                 margin: '0 10px',
-            }} onClick={() => {
-                searchValue = obj?.evolutions?.[i]?.name
-                setTimeout(() => {
-                    getData()
-                }, 100)
+            }} onClick={async () => {
+                setSearchValue(obj?.evolutions?.[i]?.name)
+                const pokemon = getPokemon(obj?.evolutions?.[i]?.name)
+                const res = await responseHandler(pokemon) as Pokemon
+                if (res) {
+                    setObj(res)
+                }
+       
             }}>{obj?.evolutions?.[i]?.name}</a>)
         }
         return <div>{arr}</div>
@@ -82,7 +86,8 @@ export default function Home() {
 
 
     const handleChange = (event) => {
-        searchValue = event.target.value
+        // searchValue = event.target.value
+        setSearchValue(event.target.value)
     }
 
     return (
